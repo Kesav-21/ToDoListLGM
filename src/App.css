@@ -1,0 +1,66 @@
+header{
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.3px);
+    -webkit-backdrop-filter: blur(2.3px);
+    padding: 1px;
+    text-align: center;
+}
+
+.container{
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.3px);
+    -webkit-backdrop-filter: blur(2.3px);
+    width: 50%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn{
+    background-color: greenyellow;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+#addTask{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    
+}
+#addTask > label {
+    margin-left: 20px;
+}
+#addTask > label{
+
+}
+
+.listItem{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    
+}
+
+.striking{
+    text-decoration: line-through;
+}
+#tick{
+    display: none;
+}
+.striking > img{
+    display: block !important;
+}
