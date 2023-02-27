@@ -8,7 +8,6 @@ class List extends React.Component{
     }
 }
 render(){
-    console.log(this.state.tasks.map(elem=>elem.id));
     return(
         <div>
             {this.state.tasks.map(elem=>
@@ -16,6 +15,8 @@ render(){
             <h1>{elem.id}</h1>
             <h2>{elem.tname}</h2>
             <h3>{elem.tdesc}</h3>
+            <input type="button" id={elem.id} value="Mark Done"/>
+            <input type="button" id={elem.id} value="Delete"/>
             </div>)}
         </div>
     )
