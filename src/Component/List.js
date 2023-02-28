@@ -1,7 +1,7 @@
 import React from "react";
 import Add from "./Add";
 import tick from '../assets/img/tick.svg';
-
+import deleteico from '../assets/img/delete.svg';
 class List extends React.Component{
     constructor(props){
     super(props);
@@ -18,6 +18,7 @@ onSubmitHandler(event){
     const addlist=this.state.tasks.concat({id:this.state.id,tname:event.target.elements[0].value,tdesc:event.target.elements[1].value});
     this.setState({tasks:addlist});
     this.setState({id:this.state.id+1});
+    document.getElementById("addTask").reset();
     event.preventDefault();
 }
 
@@ -35,11 +36,14 @@ render(){
     return(
         <div>
             <Add onSubmitHandler={this.onSubmitHandler}/>
+            <div>
             {this.state.tasks.map(elem=>
             <div key={elem.id} className="listItem" >
-            <p onClick={this.markDoneHandler}><img id="tick" src={tick} height={50} width={50}/>{elem.tname}</p>
-            <input type="button" id={elem.id} value="Delete" onClick={this.deleteHandler}/>
-            </div>)}
+            <p className="taskp" onClick={this.markDoneHandler}><img id="tick" src={tick} height={23} width={23} alt="tick"/>{elem.tname}</p>
+            <img src={deleteico} id={elem.id} height={30} width={30} onClick={this.deleteHandler} alt="delete"/>
+            </div>
+            )}
+            </div>
         </div>
     )
 }
